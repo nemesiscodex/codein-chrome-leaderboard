@@ -15,3 +15,6 @@ Google code-in leaderboard chrome extension
 1. Go to `https://codein.withgoogle.com/` and log in.
 2. Open the browser developer tools.
 3. Paste the content of the script `codein.js` in the console.
+
+## License
+This leaderboard is released under the MIT [License](http://opensource.org/licenses/MIT).
