@@ -21,20 +21,39 @@ function toArray(){
 
 function printTop10(){
     var studentArray = toArray();
-
+    var showTasks = true;
+    if(!console.groupCollapsed || !console.groupEnd) {
+        showTasks = false;
+    }
     studentArray.sort(function(s1, s2){
         return s2.count - s1.count;
     })
 
+    if(showTasks)
+        console.groupCollapsed("Leaderboard");
     for(var i = 0; i < 10 && i < studentArray.length; i++){
         var student = studentArray[i];
-        console.info((i + 1) + ") " + student.display_name + ": " + student.count+ " tasks.");
+        var studentScore = (i + 1) + ") " + student.display_name + ": " +
+                            student.count+ " tasks.";
+        if(showTasks){
+
+            console.groupCollapsed(studentScore);
+            for(var j = 0; j < student.task_completed.length; j++){
+                var task = student.task_completed[j];
+                console.log(task.name);
+            }
+            console.groupEnd();
+        }else{
+            console.info(studentScore);
+        }
     }
+    if(showTasks)
+        console.groupEnd();
 
 }
 
 function fetchData(){
-    var PAGE_SIZE = 1000;
+    var PAGE_SIZE = 3000;
     var STATUS_COMPLETE = 7;
     $.ajax({
         method: "GET",
