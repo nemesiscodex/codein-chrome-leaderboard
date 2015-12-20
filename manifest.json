@@ -2,7 +2,7 @@
   "manifest_version": 2,
   "name": "Google code-in leaderboard",
   "description": "Google code-in 2015 leaderboard chrome extension",
-  "version": "1.0",
+  "version": "1.1",
   "content_scripts": [
   	{
       "matches": ["https://codein.withgoogle.com/*"],
