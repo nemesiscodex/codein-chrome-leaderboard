@@ -1,7 +1,7 @@
 # codein-chrome-leaderboard
 Google code-in leaderboard chrome extension
 
-![Leaderboard](https://cloud.githubusercontent.com/assets/3976562/11911823/c4d501da-a601-11e5-91d6-bfcbcf63b594.png)
+![Leaderboard](https://cloud.githubusercontent.com/assets/3976562/11915879/566e6cc6-a698-11e5-900c-11540e152d43.png)
 
 ## Requirements
 - You must be a Mentor or an Org Admin at Google Code-in 2015
